@@ -1,0 +1,43 @@
+body {
+  width: 100%;
+}
+
+.layout-content {
+  padding: $verticalGutterMobile $horizontalGutterMobile;
+  width: 100%;
+
+  @include mq('lg') {
+    padding: $verticalGutter $horizontalGutter $verticalGutter $contentGutter;
+    margin-left: $sidebarWidth;
+    width: initial;
+  }
+}
+
+.layout-sidebar {
+  border-bottom: 2px solid palette('darkgray');
+  width: 100%;
+  padding: $verticalGutterMobile $horizontalGutterMobile;
+  overflow-y: auto;
+
+  @include mq('lg') {
+    height: 100vh;
+    padding: $verticalGutter $horizontalGutter 0 $horizontalGutter;
+    position: fixed;
+    width: $sidebarWidth;
+    border-right: 2px solid palette('darkgray');
+    border-bottom: none;
+  }
+}
+
+.sidebar-container {
+  width: 100%;
+}
+
+.content-container {
+  max-width: $contentWidth;
+  margin: auto;
+
+  @include mq('lg') {
+    margin: 0;
+  }
+}

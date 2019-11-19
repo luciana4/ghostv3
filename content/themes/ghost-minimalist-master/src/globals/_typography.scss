@@ -1,0 +1,71 @@
+body {
+  font-family: $titleFontFamily;
+  font-weight: $titleFontWeightLight;
+  line-height: 1.2;
+  font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $titleFontFamily;
+  font-weight: $titleFontWeight;
+}
+
+.post-content {
+  font-family: $bodyFontFamily;
+  font-weight: $bodyFontWeight;
+  line-height: 1.5;
+  // p, li, pre, em, blockquote {
+  // }
+
+  // p, li, em, blockquote {
+    @include mq('md') {
+      font-size: 1.125rem;
+    }
+  // }
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.375rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+h5 {
+  font-size: 1.1rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+code[class*="language-"],
+pre[class*="language-"] {
+  font-family: $codeFontFamily;
+}
+
+blockquote {
+  font-style: italic;
+}
+
+pre code {
+  font-size: 1rem;
+}
+
+a {
+  text-decoration: none;
+}

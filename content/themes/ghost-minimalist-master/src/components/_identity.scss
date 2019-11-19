@@ -1,0 +1,18 @@
+.identity {
+  h1.logo {
+    margin: 0;
+  }
+
+  .logo a {
+    color: palette('darkgray');
+  }
+
+  .logo-img {
+    width: 100%;
+  }
+
+  .description {
+    margin: 16px 0 0 0;
+    color: palette('label');
+  }
+}

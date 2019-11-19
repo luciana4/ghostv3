@@ -1,0 +1,38 @@
+.pagination {
+  margin-top: $verticalGutterDouble;
+  text-align: center;
+  position: relative;
+}
+
+.page-number {
+  color: palette('label');
+}
+
+.newer-posts {
+  position: absolute;
+  left: 0;
+}
+
+.older-posts {
+  position: absolute;
+  right: 0;
+}
+
+.read-story {
+  margin-top: $verticalGutter;
+
+  span {
+    color: palette('label');
+  }
+
+  &.previous {
+    margin-right: $horizontalGutter;
+  }
+}
+
+.more-content {
+  @include mq('sm') {
+    display: flex;
+    justify-content: space-between;
+  }
+}

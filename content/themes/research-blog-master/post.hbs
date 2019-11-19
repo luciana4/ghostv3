@@ -1,0 +1,63 @@
+{{!< default}}
+
+{{! The comment above "< default" means - insert everything in this file into
+    the {body} of the default.hbs template, which contains our header/footer. }}
+
+<link rel="stylesheet" href="{{asset "css/styles.css"}}">
+
+{{! Everything inside the #post tags pulls data from the post }}
+{{#post}}
+
+{{#contentFor "initHighlight"}}
+    <script>hljs.initHighlightingOnLoad();</script>
+{{/contentFor}}
+
+<meta charset="utf-8">
+
+<script src="https://sdan.cc/assets/js/t4.js"></script>
+
+<link href="https://sdan.cc/prism.css" rel="stylesheet" />
+<script src="https://sdan.cc/prism.js"></script>
+
+
+<script type="text/front-matter">
+  title:  "{{title}}"
+  description: "{{excerpt}}"
+  authors:
+  - Surya Dantuluri: https://suryad.com
+  - PGP Clearsigned Signature: https://sdan.cc/pgp{{url}}c.txt
+  affiliations:
+  - Monta Vista High School
+  - PGP Detached Signature: https://sdan.cc/pgp{{url}}d.txt
+
+</script>
+
+
+<dt-article>
+  <h1 style="grid-column: text/page;">
+      <div class="pushback">
+      <strong>{{title}}</strong>
+  </div>
+
+  </h1>
+  <h2>{{excerpt}}</h2>
+  <dt-byline></dt-byline>
+
+  {{content}}
+
+
+  <!-- <p>This is the first paragraph of the article.</p>
+  <p>We can also cite <dt-cite key="gregor2015draw"></dt-cite> external publications.</p> -->
+</dt-article>
+
+<div class="commento"> 
+<div class="l-body">
+
+<div id="commento"></div>
+<script src="https://habla.suryad.com/js/commento.js"></script>
+
+</div>
+</div>
+
+
+{{/post}}

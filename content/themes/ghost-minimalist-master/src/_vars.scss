@@ -1,0 +1,33 @@
+$bodyFontFamily: georgia, serif;
+$bodyFontWeight: 400;
+
+$titleFontFamily: 'Fira Sans', sans-serif;
+$titleFontWeightLight: 500;
+$titleFontWeight: 700;
+
+$codeFontFamily: 'Monaco', 'Consolas', Monospace;
+
+$colors: (
+  "white"    : #fff,
+  "hint"     : #a2a2a2,
+  "label"    : #3b3b3b,
+  "darkgray" : #1a1a1a,
+  "highlight": #fffb00,
+  "accent"   : #235aa1
+);
+
+$breakpoints: (
+  "sm" : 480px,
+  "md": 768px,
+  "lg" : 1024px,
+  "xl" : 1200px
+);
+
+$sidebarWidth: 320px;
+$contentWidth: 560px;
+$contentGutter: 80px;
+$verticalGutterMobile: 30px;
+$verticalGutter: 40px;
+$verticalGutterDouble: 80px;
+$horizontalGutterMobile: 30px;
+$horizontalGutter: 40px;

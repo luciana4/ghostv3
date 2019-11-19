@@ -1,0 +1,31 @@
+{
+  "name": "research-blog-theme",
+  "version": "2.0.2",
+  "engines": {
+    "ghost": "^1.0.0"
+  },
+  "keywords": ["ghost-theme"],
+
+  "gpm": {
+    "type": "theme",
+    "categories": [
+      "Minimal",
+      "Personal Blogs",
+      "Developer",
+      "Coder",
+      "Code",
+      "Ghost Theme",
+      "Portfolio",
+      "Personal"
+    ]
+  },
+
+  "license": "MIT",
+  "author": {
+    "name": "Research Blog",
+    "email": "blog@sdan.cc",
+    "url": "https://suryad.com"
+  },
+  "demo": "https://blog.suryad.com",
+  "homepage": "https://github.com/dantuluri/research-blog"
+}

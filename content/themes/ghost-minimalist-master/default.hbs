@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  {{!-- Document Settings --}}
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  {{!-- Page Meta --}}
+  <title>{{ meta_title }}</title>
+
+  {{!-- Mobile Meta --}}
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  {{!-- Prism --}}
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.16.0/themes/prism-tomorrow.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.16.0/prism.min.js"></script>
+
+  {{!-- Google Fonts --}}
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans:500,700" rel="stylesheet">
+
+  {{!-- Theme Assets --}}
+  <link rel="stylesheet" type="text/css" href="{{ asset "main.css" }}" />
+  <script src="{{ asset "js/menu.js" }}"></script>
+  <script src="{{ asset "js/resize-iframe.js" }}"></script>
+
+  {{ ghost_head }}
+</head>
+<body class="{{ body_class }}">
+
+  <section class="layout-sidebar">
+    <div class="sidebar-container">
+      {{> "sidebar"}}
+    </div>
+  </section>
+
+  <section class="layout-content">
+    <div class="content-container">
+      {{{ body }}}
+    </div>
+  </section>
+
+  {{ ghost_foot }}
+</body>
+</html>

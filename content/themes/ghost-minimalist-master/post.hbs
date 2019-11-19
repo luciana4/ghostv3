@@ -1,0 +1,53 @@
+{{!< default}}
+
+{{#post}}
+  <article class="post {{#is "page"}}page{{/is}}">
+
+    <header class="post-header">
+      {{!-- Post Title --}}
+      <h1 class="post-title">{{title}}</h1>
+      {{#if feature_image}}
+        <img class="post-image" src="{{feature_image}}"/>
+      {{/if}}
+    </header>
+
+    {{!-- Content --}}
+    <section class="post-content">
+      {{content}}
+    </section>
+
+    {{!-- Meta Information --}}
+    {{#is "post"}}
+      <section class="post-meta">
+        <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">
+          {{date format="MMMM DD, YYYY"}}
+        </time>
+        {{tags prefix=" on "}}
+      </section>
+    {{/is}}
+
+    {{#is "post"}}
+      <section class="more-content">
+        {{!-- Read Previous--}}
+        <div class="read-story previous">
+          {{#prev_post}}
+          <span>Previous:</span>
+          <a class="prev-link" href="{{url}}">
+            <h3>{{title}}</h3>
+          </a>
+          {{/prev_post}}
+        </div>
+        {{!-- Read Next --}}
+        <div class="read-story next">
+          {{#next_post}}
+          <span>Next:</span>
+          <a class="next-link" href="{{url}}">
+            <h3>{{title}}</h3>
+          </a>
+          {{/next_post}}
+        </div>
+      </section>
+    {{/is}}
+
+  </article>
+{{/post}}

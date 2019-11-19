@@ -1,0 +1,63 @@
+<header class="sidebar-header">
+  <div class="identity">
+    <h1 class="logo">
+      <a href="{{@site.url}}">
+        {{#if @site.logo}}
+          <img class="logo-img" src="{{@site.logo}}" alt="{{@site.title}} logo"/>
+        {{else}}
+          {{@site.title}}
+        {{/if}}
+      </a>
+    </h1>
+    {{#if @site.description}}
+      <p class="description">{{@site.description}}</p>
+    {{/if}}
+  </div>
+  <div class="hamburger-menu">
+    <div class="hamburger-menu-line"></div>
+    <div class="hamburger-menu-line"></div>
+    <div class="hamburger-menu-line"></div>
+    <div class="close-menu"></div>
+  </div>
+</header>
+
+<div class="sidebar-content">
+  <div class="sidebar-widgets">
+    <div class="widget">
+      <h4>Links</h4>
+      {{navigation}}
+    </div>
+
+    {{#get "posts" filter="featured:true" limit="5" as |featured|}}
+      {{#if featured.length}}
+        <div class="widget recent-posts">
+          <h4>Featured</h4>
+            <ul>
+              {{#foreach featured}}
+              <li><a href="{{url}}">{{title}}</a></li>
+              {{/foreach}}
+            </ul>
+        </div>
+      {{/if}}
+    {{/get}}
+
+
+    {{#get "posts" limit="5" as |recents|}}
+      {{#if recents.length}}
+        <div class="widget recent-posts">
+          <h4>Recent Posts</h4>
+            <ul>
+              {{#foreach recents}}
+              <li><a href="{{url}}">{{title}}</a></li>
+              {{/foreach}}
+            </ul>
+        </div>
+      {{/if}}
+    {{/get}}
+
+  </div>
+
+  <footer class="sidebar-footer">
+    <section class="poweredby">Published with <a href="https://ghost.org">Ghost</a></section>
+  </footer>
+</div>
